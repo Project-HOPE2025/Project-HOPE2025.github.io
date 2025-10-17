@@ -380,7 +380,10 @@ h2 {
     margin-top: 20px;
 }
 .binance-proof-img {
-    max-width: 400px; /* FIX 2: Increased size for readability */
+    /* FIX: Increased max-width to 600px for larger display */
+    max-width: 600px; 
+    /* FIX: Added width: 100% to ensure it shrinks on mobile and prevents horizontal scroll */
+    width: 100%; 
     height: auto;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
