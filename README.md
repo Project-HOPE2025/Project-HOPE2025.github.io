@@ -1,5 +1,6 @@
 🩸 Project HOPE — Pads for Dignity
-Transparent, Crypto-Powered Fundraiser for Restoring Dignity and Education
+
+A Transparent, Crypto-Powered Fundraiser for Restoring Dignity and Education
 Project HOPE is a fully on-chain, transparent humanitarian campaign dedicated to ending period poverty among Ethiopian schoolgirls.
  Our mission is simple yet deeply impactful:
 💜 “$10 gives a girl 3–5 years of uninterrupted education and dignity.”
