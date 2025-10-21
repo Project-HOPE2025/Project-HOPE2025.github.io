@@ -66,10 +66,10 @@ We accept secure donations through multiple verified wallets:
  USDT (BEP-20, TRC-20, ERC-20) · BTC · ETH · BNB · USDC · SOL · MATIC · DOGE
 
 📬 Contact & Community
-🌐 Website: https://project-hope2025.github.io
- 🐦 Twitter/X: @ProjectHOPE_Fund
- 💬 Telegram: t.me/ProjectHOPEFund
- 📧 Email: projecthopefund@gmail.com
+🌐 Website: https://project-hope2025.org
+ 🐦 Twitter/X: @ProjectHOPE2025
+ 💬 Telegram: t.me/ProjectHOPE2025
+ 📧 Email: info@project-hope2025.org
 
 ⚡ Built for Transparency. Powered by Crypto.
 © 2025 Project HOPE — Pads for Dignity Initiative
