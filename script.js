@@ -1,6 +1,6 @@
 /* --------------------------------------------
    Project HOPE — Pads for Dignity
-   Final Script (v1.1) - Urgency Widget Added
+   Final Script (v1.2) - Urgency Widget Logic Added
    -------------------------------------------- */
 
 // Run when the DOM is fully loaded
@@ -12,8 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let popup = document.createElement("div");
     popup.textContent = message;
     
-    // Using CSS variable color
-    const orangeColor = window.getComputedStyle(document.body).getPropertyValue('--color-orange') || '#D9702F'; 
+    // Using CSS variable color for consistency
+    const orangeColor = window.getComputedStyle(document.body).getPropertyValue('--color-orange') || '#D97A32'; 
     
     // Style the popup
     popup.style.position = "fixed";
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 2000);
   }
 
-  // ---- COPY WALLET ADDRESS FEATURE (Block 8) ----
+  // ---- COPY WALLET ADDRESS FEATURE ----
   const copyButtons = document.querySelectorAll(".copy-btn");
 
   copyButtons.forEach(button => {
@@ -58,38 +58,25 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      // Copy to clipboard
-      // Using document.execCommand('copy') for better iframe compatibility
-      const textarea = document.createElement('textarea');
-      textarea.value = address;
-      document.body.appendChild(textarea);
-      textarea.select();
-      
-      try {
-        const successful = document.execCommand('copy');
-        if (successful) {
-            showPopup("✅ Wallet address copied!");
-        } else {
-            showPopup("❌ Copy failed. Try again.");
-        }
-      } catch (err) {
-        console.error("Copy failed (execCommand):", err);
+      // Use modern clipboard API
+      // Fallback for older browsers (document.execCommand('copy')) is omitted for brevity but recommended in a production environment
+      navigator.clipboard.writeText(address).then(() => {
+        showPopup("✅ Wallet address copied!");
+      }).catch(err => {
+        console.error("Copy failed:", err);
         showPopup("❌ Copy failed. Try again.");
-      }
-      
-      document.body.removeChild(textarea);
-
+      });
     });
   });
 
   // ----------------------------------------------------
-  // ITEM 4 & 5: URGENCY WIDGET LOGIC (NEW)
+  // URGENCY WIDGET LOGIC (NEW)
   // ----------------------------------------------------
 
   // --- Countdown Timer Logic (100 days) ---
   function startCountdown() {
-      // Sets the campaign end date 100 days from the hypothetical start of the campaign.
-      // Date set to Mon, 3 Feb 2026, 00:00:00 GMT for consistent countdown
+      // Sets the campaign end date 100 days from a specific point for consistency
+      // Date set to Mon, 3 Feb 2026, 00:00:00 GMT 
       const endDate = new Date('2026-02-03T00:00:00Z').getTime(); 
       const countdownEl = document.getElementById('countdown-timer');
 
@@ -117,22 +104,20 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 1000);
   }
   
-  // --- Girls Supported Count-Up Logic (Starts from 1) ---
+  // --- Girls Supported Count-Up Logic (Animates from 1) ---
   function animateCountUp() {
       const countEl = document.getElementById('girls-supported-count');
       if (!countEl) return;
 
-      // The animation starts at 1 (your requirement) and ends at the hardcoded value in HTML (100)
+      // End value is read from the HTML text content (100)
       let startValue = 1; 
       const endValue = parseInt(countEl.textContent.replace(/,/g, ''));
-      // Duration of 2 seconds for a quick, impactful animation
       const duration = 2000; 
       const startTime = performance.now();
 
       function step(timestamp) {
           const progress = timestamp - startTime;
           const percentage = Math.min(progress / duration, 1);
-          // Interpolate the value from 1 to the end value
           const currentValue = Math.floor(percentage * (endValue - startValue) + startValue);
 
           // Use toLocaleString for thousand separators
