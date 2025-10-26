@@ -45,6 +45,43 @@
     </div>
   </header>
   
+  <!-- ======== NEW: METRIC & URGENCY WIDGET ======== -->
+  <section id="metric-widget">
+    <div class="container">
+      <div class="metric-grid">
+        
+        <!-- Card 1: Countdown Timer -->
+        <div class="metric-card countdown-card">
+          <h3>Campaign Ends In:</h3>
+          <div class="countdown-timer">
+            <!-- IDs are for script.js to target -->
+            <div><span id="countdown-days">99</span>Days</div>
+            <div><span id="countdown-hours">10</span>Hours</div>
+            <div><span id="countdown-mins">30</span>Mins</div>
+            <div><span id="countdown-secs">15</span>Secs</div>
+          </div>
+        </div>
+
+        <!-- Card 2: Core Goal -->
+        <div class="metric-card goal-card">
+          <p class="goal-text">Our 100-Day Mission:</p>
+          <p class="goal-number">100,000</p>
+          <p class="goal-label">Schoolgirls Supported</p>
+        </div>
+
+        <!-- Card 3: Progress -->
+        <div class="metric-card progress-card">
+          <p class="progress-label">Girls Supported So Far:</p>
+          <!-- This number will be updated by JS -->
+          <p class="progress-number" id="girls-supported">10,000</p> 
+          <p class="progress-subtext">($10 = 1 Girl)</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- ======== END METRIC WIDGET ======== -->
+
   <section id="video" class="video">
     <div class="container">
       <h2>Why We Started: Watch the Project HOPE Story</h2>
