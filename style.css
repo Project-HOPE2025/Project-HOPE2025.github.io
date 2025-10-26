@@ -216,6 +216,36 @@ h2 {
   margin: 0;
 }
 
+/* --- MODIFICATION: Progress Bar Styles --- */
+.progress-bar-container {
+  width: 100%;
+  max-width: 250px; /* Constrain width */
+  margin: 10px auto 0;
+  background-color: var(--color-taupe); /* Light background for the track */
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--color-taupe);
+}
+.progress-bar-inner {
+  height: 20px;
+  width: 0%; /* Will be set by JS */
+  background-color: var(--color-orange);
+  border-radius: 8px 0 0 8px; /* Round left corner */
+  transition: width 0.5s ease-in-out;
+  text-align: left;
+  line-height: 20px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.progress-percentage {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-coffee);
+  margin-top: 5px;
+}
+/* --- END MODIFICATION --- */
+
 
 /* ------------------------------------------
    BLOCK 2 & 5 & 7: WARM TAUPE SECTIONS
@@ -264,6 +294,34 @@ h2 {
     color: var(--color-orange);
     margin-bottom: 10px;
 }
+
+/* --- MODIFICATION: Sources List Styles --- */
+.sources-list {
+  max-width: 800px;
+  margin: 40px auto 0 auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.05); /* Slightly darker taupe */
+  border-radius: 8px;
+  text-align: left;
+  font-size: 0.9rem;
+  color: var(--color-coffee); /* Dark text on light bg */
+}
+.sources-list h4 {
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--color-coffee);
+}
+.sources-list ul {
+  list-style-position: inside;
+  padding-left: 0;
+  list-style-type: none; /* Remove default bullets */
+}
+.sources-list li {
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+/* --- END MODIFICATION --- */
+
 
 /* Transparency Embed (Block 7) */
 /* Text Emphasis Correction */
@@ -489,8 +547,9 @@ h2 {
   margin: 0 auto;
   align-items: center;
 }
+/* --- MODIFICATION: Enlarged Impact Image --- */
 .impact-image {
-  flex: 40%;
+  flex: 1; /* Was 40% */
 }
 .impact-image img {
   width: 100%;
@@ -500,8 +559,9 @@ h2 {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 .impact-text {
-  flex: 60%;
+  flex: 1; /* Was 60% */
 }
+/* --- END MODIFICATION --- */
 .burnt-orange-quote {
     font-size: 1.5rem;
     color: var(--color-orange);
@@ -742,5 +802,3 @@ footer p {
     box-shadow: 0 0 10px rgba(217, 112, 47, 0.5);
   }
 }
-
-
