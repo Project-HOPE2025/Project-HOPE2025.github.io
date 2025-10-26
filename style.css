@@ -547,9 +547,9 @@ h2 {
   margin: 0 auto;
   align-items: center;
 }
-/* --- MODIFICATION: Enlarged Impact Image --- */
+/* --- MODIFICATION: Adjusted Impact Image Size --- */
 .impact-image {
-  flex: 1; /* Was 40% */
+  flex: 0.75; /* Adjusted from 1 (50%) to be ~43% */
 }
 .impact-image img {
   width: 100%;
@@ -559,7 +559,7 @@ h2 {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 .impact-text {
-  flex: 1; /* Was 60% */
+  flex: 1; /* This will take up the remaining space (~57%) */
 }
 /* --- END MODIFICATION --- */
 .burnt-orange-quote {
@@ -802,3 +802,4 @@ footer p {
     box-shadow: 0 0 10px rgba(217, 112, 47, 0.5);
   }
 }
+
