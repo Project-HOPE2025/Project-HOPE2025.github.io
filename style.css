@@ -706,3 +706,41 @@ footer p {
       font-size: 2rem;
     }
 }
+
+/* Floating Donate Now Button */
+.donate-float-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 25px;
+  background-color: #D9702F; /* Project HOPE brand orange */
+  color: #fff;
+  padding: 14px 26px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 0 15px rgba(217, 112, 47, 0.5);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  animation: pulseGlow 2s infinite;
+}
+
+.donate-float-btn:hover {
+  background-color: #c55f22; /* slightly darker orange for hover */
+  transform: scale(1.05);
+}
+
+/* Soft orange pulse glow */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(217, 112, 47, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(217, 112, 47, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(217, 112, 47, 0.5);
+  }
+}
+
+
