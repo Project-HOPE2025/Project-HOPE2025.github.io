@@ -55,9 +55,53 @@ document.addEventListener("DOMContentLoaded", () => {
       secsEl.innerText = formatTime(seconds);
     }, 1000);
   }
+  
+  /**
+   * 2. (NEW) PROGRESS BAR CALCULATOR
+   */
+  function setupProgressBar() {
+    // Get all the elements needed
+    const girlsSupportedEl = document.getElementById("girls-supported");
+    const goalNumberEl = document.querySelector(".goal-number"); // In the adjacent card
+    const progressBarEl = document.getElementById("progress-bar-inner");
+    const percentageTextEl = document.getElementById("progress-percentage");
 
-  // Run the new function
+    // Check if all elements exist before running
+    if (!girlsSupportedEl || !goalNumberEl || !progressBarEl || !percentageTextEl) {
+      console.warn("Progress bar elements not found. Skipping calculation.");
+      return;
+    }
+
+    try {
+      // Read the numbers from the HTML, removing any commas
+      const girlsSupported = parseFloat(girlsSupportedEl.innerText.replace(/,/g, '')) || 0;
+      const goalNumber = parseFloat(goalNumberEl.innerText.replace(/,/g, '')) || 100000; // Default to 100k if not found
+
+      let percentage = 0;
+      if (goalNumber > 0) {
+        percentage = (girlsSupported / goalNumber) * 100;
+      }
+      
+      // Clamp the percentage between 0 and 100
+      if (percentage > 100) percentage = 100;
+      if (percentage < 0) percentage = 0;
+
+      // Format the percentage string (e.g., "1.0%")
+      const percentageString = percentage.toFixed(1) + "%";
+
+      // Update the progress bar width and the percentage text
+      progressBarEl.style.width = percentage + "%";
+      percentageTextEl.innerText = percentageString;
+
+    } catch (error) {
+      console.error("Error calculating progress bar:", error);
+    }
+  }
+
+
+  // --- RUN ALL SETUP FUNCTIONS ---
   setupCountdown();
+  setupProgressBar(); // <-- Call the new progress bar function
 
 
   // ---- COPY WALLET ADDRESS FEATURE (Block 8) ----
@@ -114,4 +158,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 3000); // Show for 3 seconds
   }
 });
-
