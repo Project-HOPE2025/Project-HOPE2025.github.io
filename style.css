@@ -134,9 +134,93 @@ h2 {
 /* LOGO AND TRANSLATE CSS BLOCKS REMOVED */
 
 
+/* --- NEW: METRIC & URGENCY WIDGET --- */
+#metric-widget {
+  background-color: var(--color-taupe);
+  padding: 60px 0; /* A bit less padding to act as a tight banner */
+}
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  align-items: center;
+}
+.metric-card {
+  background-color: var(--color-cream);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  min-height: 180px; /* Ensures all cards are the same height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* Card 1: Countdown */
+.countdown-card h3 {
+  font-size: 1.2rem;
+  color: var(--color-coffee);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+.countdown-timer {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+.countdown-timer div {
+  font-size: 0.9rem;
+  color: var(--color-coffee);
+}
+.countdown-timer span {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-orange);
+  display: block;
+  line-height: 1;
+}
+/* Card 2: Goal */
+.goal-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+.goal-number {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--color-orange);
+  line-height: 1.1;
+  margin: 5px 0;
+}
+.goal-label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+/* Card 3: Progress */
+.progress-label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+.progress-number {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--color-coffee); /* Differentiate from the goal */
+  line-height: 1.1;
+  margin: 5px 0;
+}
+.progress-subtext {
+  font-size: 1rem;
+  opacity: 0.8;
+  margin: 0;
+}
+
+
 /* ------------------------------------------
    BLOCK 2 & 5 & 7: WARM TAUPE SECTIONS
    ------------------------------------------ */
+/* NOTE: #metric-widget now also uses --color-taupe */
 .roadmap, .problem, .transparency {
     background-color: var(--color-taupe);
 }
@@ -585,6 +669,15 @@ footer p {
     .solution-gallery img {
         max-width: 90%;
     }
+
+    /* NEW: Responsive Metric Widget for Tablet */
+    .metric-grid {
+      /* Stack on tablets and below */
+      grid-template-columns: 1fr;
+    }
+    .metric-card {
+      min-height: 0; /* Remove min-height when stacked */
+    }
 }
 @media (max-width: 600px) {
     .hero h1 {
@@ -603,5 +696,13 @@ footer p {
     .social-row a {
         display: block;
         margin: 10px auto;
+    }
+
+    /* NEW: Responsive Metric Widget Font Sizes for Mobile */
+    .goal-number, .progress-number {
+      font-size: 2.8rem;
+    }
+    .countdown-timer span {
+      font-size: 2rem;
     }
 }
