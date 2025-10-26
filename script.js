@@ -7,6 +7,59 @@
 document.addEventListener("DOMContentLoaded", () => {
   console.log("✅ Project HOPE site loaded successfully.");
 
+  // --- NEW: METRIC WIDGET LOGIC (Countdown) ---
+
+  /**
+   * 1. LIVE COUNTDOWN TIMER
+   */
+  function setupCountdown() {
+    // SET YOUR CAMPAIGN END DATE HERE
+    const campaignEndDate = new Date("February 3, 2026 12:00:00").getTime();
+
+    // Get elements
+    const daysEl = document.getElementById("countdown-days");
+    const hoursEl = document.getElementById("countdown-hours");
+    const minsEl = document.getElementById("countdown-mins");
+    const secsEl = document.getElementById("countdown-secs");
+
+    // Helper function to add leading zero
+    function formatTime(time) {
+      return time < 10 ? `0${time}` : time;
+    }
+
+    // Update the countdown every second
+    const timerInterval = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = campaignEndDate - now;
+
+      // Time calculations
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // If the countdown is over
+      if (distance < 0) {
+        clearInterval(timerInterval);
+        daysEl.innerText = "00";
+        hoursEl.innerText = "00";
+        minsEl.innerText = "00";
+        secsEl.innerText = "00";
+        return;
+      }
+
+      // Update HTML
+      daysEl.innerText = formatTime(days);
+      hoursEl.innerText = formatTime(hours);
+      minsEl.innerText = formatTime(minutes);
+      secsEl.innerText = formatTime(seconds);
+    }, 1000);
+  }
+
+  // Run the new function
+  setupCountdown();
+
+
   // ---- COPY WALLET ADDRESS FEATURE (Block 8) ----
   const copyButtons = document.querySelectorAll(".copy-btn");
 
@@ -61,3 +114,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 3000); // Show for 3 seconds
   }
 });
+
