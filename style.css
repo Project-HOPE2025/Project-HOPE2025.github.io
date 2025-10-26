@@ -1,12 +1,12 @@
 /* --------------------------------------------
    Project HOPE — Pads for Dignity
-   Final CSS (v1.0) - All Corrections Applied
+   Final CSS (v1.1) - Corrections Applied
    -------------------------------------------- */
 
 /* --- Custom Color Palette --- */
 :root {
   --color-coffee: #4B3621;  /* Deep Coffee Brown (Headings, Text, Donation BG) */
-  --color-orange: #D9702F;  /* Burnt Orange (UPDATED HEX: CTAs, Safety Banner, Warnings) */
+  --color-orange: #D97A32;  /* Burnt Orange (CTAs, Safety Banner, Warnings) */
   --color-taupe: #C2A68D;   /* Warm Taupe (Section Separator) */
   --color-cream: #F7F1E8;   /* Cream (Main Background) */
   --color-white: #ffffff;
@@ -21,7 +21,6 @@
 }
 
 body {
-  /* Font Correction: Poppins Applied */
   font-family: 'Poppins', sans-serif;
   color: var(--color-coffee);
   background-color: var(--color-cream);
@@ -38,6 +37,11 @@ body {
 section {
   padding: 80px 0;
   border-top: 5px solid var(--color-taupe);
+  background-color: var(--color-cream); 
+}
+/* Alternating section colors */
+#story, #transparency, #impact, #solution { 
+    background-color: var(--color-white);
 }
 
 h1, h2, h3 {
@@ -78,7 +82,7 @@ h2 {
   border: 2px solid var(--color-orange);
 }
 .btn-primary:hover {
-  background-color: #A35726; /* Darker orange for hover */
+  background-color: #A35726; 
   border-color: #A35726;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
@@ -94,12 +98,8 @@ h2 {
   transform: translateY(-2px);
 }
 
-/* New: Styling for the heart icon in the main headline and CTAs */
-.heart-icon, .btn-primary a {
-    color: var(--color-orange);
-}
-.btn-primary {
-    /* Ensure the heart emoji inside the button is styled by the primary background color */
+/* Heart icon in the H1 remains white */
+.hero h1 .heart-icon {
     color: var(--color-white); 
 }
 
@@ -107,12 +107,13 @@ h2 {
 .hero {
   position: relative;
   min-height: 80vh;
+  /* Background Image Restored */
   background: url('assets/hero-bg.jpg') no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 100px; /* Space for fixed header if one were added */
-  border-top: none; /* No separator at the very top */
+  padding-top: 100px; 
+  border-top: none; 
 }
 .hero-overlay {
   position: absolute;
@@ -120,7 +121,7 @@ h2 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+  background-color: rgba(0, 0, 0, 0.4); 
   z-index: 1;
 }
 .hero-content {
@@ -151,17 +152,13 @@ h2 {
     font-weight: 600;
 }
 
-/* --- ITEM 4 & 5: METRIC WIDGET STYLES (NEW) --- */
+/* --- METRIC WIDGET STYLES --- */
 .metric-widget {
-    background-color: #f8f8f8; /* Light background to stand out */
+    background-color: #f8f8f8; 
     padding: 30px 0;
     text-align: center;
     border-bottom: 5px solid var(--color-taupe); 
-    border-top: none; /* Remove top border since it is below the hero */
-}
-
-.metric-widget .container {
-    max-width: 1000px;
+    border-top: none; 
 }
 
 .metric-widget .widget-goal {
@@ -199,11 +196,9 @@ h2 {
 .metric-value {
     font-size: 3.5rem;
     font-weight: 900;
-    color: var(--color-orange); /* Burnt Orange for urgency */
+    color: var(--color-orange); 
     line-height: 1;
 }
-/* --- END: METRIC WIDGET STYLES --- */
-
 
 /* --- Roadmap Section --- */
 .roadmap-grid {
@@ -234,10 +229,7 @@ h2 {
     color: #666;
 }
 
-/* --- ITEM 1: VIDEO SECTION (now moved) --- */
-.video {
-    /* No change to existing video styles */
-}
+/* --- VIDEO SECTION --- */
 .video-embed-container {
     position: relative;
     width: 100%;
@@ -256,20 +248,13 @@ h2 {
     border-radius: 8px;
     border: none;
 }
-/* ITEM 2: NEW CTA row styles */
 .cta-button-row {
     text-align: center;
     margin-top: 40px;
-    margin-bottom: -20px; /* Pull up a bit before next section */
+    margin-bottom: -20px; 
 }
 
 /* --- Story Section --- */
-.story {
-    background-color: var(--color-white);
-}
-.story h2, .story p.lead {
-    text-align: left;
-}
 .story-layout {
     display: flex;
     gap: 40px;
@@ -277,7 +262,7 @@ h2 {
     margin-top: 40px;
 }
 .story-image {
-    flex: 0 0 400px; /* Fixed width for the image container */
+    flex: 0 0 400px;
     max-width: 100%;
 }
 .story-image img {
@@ -302,14 +287,15 @@ h2 {
     margin-bottom: 1rem;
     text-align: justify;
 }
-/* ITEM 2: New CTA below the story */
 .story-cta {
     margin-top: 30px;
 }
 
 /* --- Problem/Stats Section --- */
-.problem {
-    background-color: var(--color-cream);
+.problem h2 {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .stats-grid {
     display: grid;
@@ -329,10 +315,6 @@ h2 {
     color: var(--color-orange);
     margin-bottom: 10px;
     line-height: 1.2;
-}
-.stat-text {
-    font-size: 1rem;
-    color: var(--color-coffee);
 }
 
 /* --- Solution Section --- */
@@ -357,9 +339,6 @@ h2 {
 }
 
 /* --- Transparency Section --- */
-.transparency {
-    background-color: var(--color-white);
-}
 .lead-text-bold {
     text-align: center;
     font-size: 1.1rem;
@@ -369,11 +348,11 @@ h2 {
 }
 .embed-wrap {
     text-align: center;
-    margin: 40px auto;
+    margin: 0 auto;
+    max-width: 1000px;
 }
 .dune-frame {
     width: 100%;
-    max-width: 1000px;
     height: 500px;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -388,9 +367,6 @@ h2 {
 }
 
 /* --- Donate Section --- */
-.donate {
-    background-color: var(--color-cream);
-}
 .crypto-safety-alert {
     background-color: #fce4e4; 
     border: 2px solid var(--color-orange); 
@@ -399,19 +375,15 @@ h2 {
     border-radius: 10px;
     margin-bottom: 40px;
 }
-.crypto-safety-alert p {
-    margin: 0;
-    font-weight: 600;
-    font-size: 1.1rem;
-}
 .lead-text {
     text-align: center;
     margin-bottom: 40px;
     display: block;
 }
+/* Wallet grid restored to 4 columns on desktop */
 .wallet-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
     gap: 20px;
 }
 .wallet-card {
@@ -467,17 +439,11 @@ h2 {
 }
 
 /* --- Impact Section --- */
-.impact {
-    background-color: var(--color-white);
-}
 .impact-layout {
     display: flex;
     gap: 40px;
     align-items: center;
     margin-top: 40px;
-}
-.impact-image {
-    flex: 1;
 }
 .impact-image img {
     width: 100%;
@@ -485,9 +451,6 @@ h2 {
     height: auto;
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-.impact-text {
-    flex: 1;
 }
 .burnt-orange-quote {
     font-size: 1.2rem;
@@ -500,9 +463,6 @@ h2 {
 }
 
 /* --- Partners Section --- */
-.partners {
-    background-color: var(--color-cream);
-}
 .partner-logos {
     display: flex;
     justify-content: space-around;
@@ -510,10 +470,6 @@ h2 {
     flex-wrap: wrap;
     gap: 30px;
     margin-top: 40px;
-}
-.partner-logo-link {
-    display: block;
-    transition: transform 0.2s;
 }
 .partner-logo-link:hover {
     transform: translateY(-5px);
@@ -532,6 +488,10 @@ h2 {
 }
 
 /* --- Community Section --- */
+.community p {
+    text-align: center;
+    margin-bottom: 30px;
+}
 .social-row {
     display: flex;
     justify-content: center;
@@ -553,7 +513,7 @@ h2 {
     background-color: #A35726;
 }
 
-/* --- Footer (Unchanged/Approved) --- */
+/* --- Footer --- */
 footer {
     background-color: var(--color-orange);
     padding: 30px 0;
@@ -568,33 +528,15 @@ footer p {
 
 /* --- RESPONSIVE ADJUSTMENTS --- */
 @media (max-width: 1024px) {
-    /* Metric Widget */
-    .metric-grid {
-        gap: 20px;
-    }
-    .metric-card {
-        flex-basis: 48%; 
-    }
-    .metric-value {
-        font-size: 3rem;
-    }
-
-    /* Donate Grid Adjusts for Tablet/Small Desktop */
-    .wallet-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
+    .metric-card { flex-basis: 48%; }
+    .wallet-grid { grid-template-columns: repeat(3, 1fr); }
     .story-layout, .impact-layout {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
-    .story-image, .impact-image {
-        order: 1;
-        margin-bottom: 20px;
-    }
-    .story-text, .impact-text {
-        order: 2;
-    }
+    .story-image, .impact-image { order: 1; margin-bottom: 20px; }
+    .story-text, .impact-text { order: 2; }
     .story-quote, .burnt-orange-quote {
         padding-left: 0;
         border-left: none;
@@ -609,49 +551,20 @@ footer p {
 }
 
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-    h2 {
-        font-size: 1.8rem;
-    }
-    section {
-        padding: 50px 0;
-    }
-    .hero-buttons {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-    .btn {
-        margin: 0;
-        width: 100%;
-    }
+    .hero h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.8rem; }
+    section { padding: 50px 0; }
+    .hero-buttons { display: flex; flex-direction: column; gap: 15px; }
+    .btn { margin: 0; width: 100%; }
     
-    /* Metric Widget Mobile */
-    .metric-card {
-        flex-basis: 100%;
-    }
-    .metric-value {
-        font-size: 2.5rem;
-    }
+    .metric-card { flex-basis: 100%; }
+    .metric-value { font-size: 2.5rem; }
     
-    .roadmap-grid {
-        flex-direction: column;
-    }
+    .roadmap-grid { flex-direction: column; }
+    .story-image { flex: 0 0 100%; }
+    .story-quote { font-size: 1.2rem; }
     
-    .story-image {
-        flex: 0 0 100%;
-    }
-    .story-quote {
-        font-size: 1.2rem;
-    }
+    .stats-grid { grid-template-columns: 1fr; }
     
-    .stats-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .wallet-grid {
-      grid-template-columns: repeat(2, 1fr); /* 2 columns on small mobile */
-    }
+    .wallet-grid { grid-template-columns: repeat(2, 1fr); }
 }
