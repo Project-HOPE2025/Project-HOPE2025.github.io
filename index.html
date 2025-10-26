@@ -69,12 +69,17 @@
           <p class="goal-label">Schoolgirls Supported</p>
         </div>
 
-        <!-- Card 3: Progress -->
+        <!-- Card 3: Progress (MODIFIED) -->
         <div class="metric-card progress-card">
           <p class="progress-label">Girls Supported So Far:</p>
           <!-- This number is now set manually in HTML. JS just formats it. -->
           <p class="progress-number" id="girls-supported">1000</p> 
-          <p class="progress-subtext">($10 = 1 Girl)</p>
+          <!-- MODIFICATION: Replaced subtext with progress bar -->
+          <div class="progress-bar-container">
+            <div class="progress-bar-inner" id="progress-bar-inner"></div>
+          </div>
+          <p class="progress-percentage" id="progress-percentage">0%</p>
+          <!-- END MODIFICATION -->
         </div>
 
       </div>
@@ -182,6 +187,17 @@
           <p class="stat-text">Poor MHM is a leading cause of **poor school performance, drop-out, and reduced educational attainment**.</p>
         </div>
       </div>
+
+      <!-- MODIFICATION: Added Sources List -->
+      <div class="sources-list">
+        <h4>Sources:</h4>
+        <ul>
+          <li>• Ministry of Education & UNESCO (2023) – Girls’ Education and Attendance Report.</li>
+          <li>• Population Council (2024) – Impact of Reusable Pad Interventions in East Africa.</li>
+        </ul>
+      </div>
+      <!-- END MODIFICATION -->
+
     </div>
   </section>
 
@@ -190,7 +206,8 @@
       <h2>Our Solution — Reusable Pad Kits That Last 3–5 Years</h2>
       <div class="solution-gallery">
         <img src="assets/pad-kit.png" alt="Full reusable pad kit contents" />
-        <img src="assets/pad-real.jpg" alt="Reusable pad product photo" />
+        <img src="assets.
+/pad-real.jpg" alt="Reusable pad product photo" />
         <img src="assets/pads-info.jpg" alt="Reusable pad kit infographic benefits" />
       </div>
       <p class="solution-key-metric">Each kit includes 4 reusable pads, 1 washable pouch, soap, drying string, and a hygiene leaflet. <strong>$10 = 1 reusable kit for 3–5 years of dignity and education.</strong></p>
@@ -255,7 +272,7 @@
         <div class="impact-image">
           <img src="assets/impact.png" alt="Three schoolgirls holding textbooks, representing hope and dignity." />
         </div>
-        <div class."impact-text">
+        <div class="impact-text">
             <blockquote class="burnt-orange-quote">“Right now, at this very moment, not dozens or hundreds, but thousands of schoolgirls are absent. They are not sick; they are sidelined. You have the power to change this with a single, transparent crypto donation.”</blockquote>
             <p>For just <strong>$10,</strong> Project HOPE provides a girl with a <strong>reusable pad kit</strong> that lasts for **3–5 years**. This simple investment translates directly to a massive social return: a **70% reduction in school absenteeism** among the girls we serve. By restoring dignity, we ensure these students can stay in class, complete their education, and secure their economic future. Every transaction you make is a human story transformed—a girl staying in school.</p>
         </div>
@@ -316,10 +333,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
