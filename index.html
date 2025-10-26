@@ -37,11 +37,12 @@
     <div class="hero-overlay"></div>
     <div class="hero-content container">
       <div class="main-cta-area">
-        <h1><span class="blood-red">🩸</span> Stop Period Poverty. $10 Keeps a Girl in School for 3 to 5 Years!</h1>
+        <h1><span class="heart-icon">❤️</span> Stop Period Poverty. $10 Keeps a Girl in School for 3 to 5 Years!</h1>
         <p class="lead">Nearly 3 million Ethiopian schoolgirls miss school due to period poverty. Join the movement — restore dignity, empower education.</p>
 
         <div class="hero-buttons">
-          <a class="btn btn-primary" href="#donate">💜 Donate Now</a>
+          <!-- CTA 1: Red Heart -->
+          <a class="btn btn-primary" href="#donate">❤️ Donate Now</a>
           <a class="btn btn-secondary" href="#video">▶ Watch Video</a>
         </div>
 
@@ -49,6 +50,25 @@
       </div>
     </div>
   </header>
+  
+  <!-- START: ITEM 4 & 5 - URGENCY WIDGET (NEW SECTION) -->
+  <section id="metric-widget" class="metric-widget">
+    <div class="container">
+      <h2 class="widget-goal">100,000 GIRLS IN 100 DAYS.</h2>
+      <div class="metric-grid">
+        <div class="metric-card">
+          <p class="metric-label">Girls Supported So Far</p>
+          <!-- Placeholder starting at 100 girls, JavaScript animates from 1 -->
+          <p class="metric-value" id="girls-supported-count">100</p> 
+        </div>
+        <div class="metric-card">
+          <p class="metric-label">Campaign Countdown</p>
+          <p class="metric-value" id="countdown-timer">00d 00h 00m</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END: ITEM 4 & 5 -->
 
   <section id="roadmap" class="roadmap">
     <div class="container">
@@ -69,13 +89,40 @@
         </div>
         <div class="phase-card">
           <div class="phase-number">III</div>
-          <h3>Phase III: National Outreach</h3>
+          <h3>Phase III: National Outreach - The 100-Day Challenge</h3>
           <p class="target-girls"><strong>100,000+</strong> School Girls</p>
-          <p class="target-fund">Target: <strong>$1,000,000 USD</strong></p>
+          <p class="target-fund">Target: <strong>$1,000,000 USD (in 100 days)</strong></p>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- START: ITEM 1 - MOVED VIDEO SECTION (Now placed after Roadmap) -->
+  <section id="video" class="video">
+    <div class="container">
+      <h2>Why We Started: Watch the Project HOPE Story</h2>
+      <div class="video-embed-container">
+        <!-- YouTube embed code -->
+        <iframe 
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/Z8QK89sTWSo?si=sM2HyEBUtDZfoeYR" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+        </iframe>
+      </div>
+      
+      <!-- ITEM 2: NEW CTA 2 (Below Video) -->
+      <div class="cta-button-row">
+        <a class="btn btn-primary" href="#donate">❤️ Donate Now</a>
+      </div>
+      
+    </div>
+  </section>
+  <!-- END: ITEM 1 - MOVED VIDEO SECTION -->
 
   <section id="story" class="story">
     <div class="container">
@@ -95,32 +142,20 @@
             <p>I had to stop. As a father, I knew instinctively: something was terribly wrong. When I asked, simply, if she was okay, the fragile dam holding her composure broke. The tears came—fast, and silent. She confessed that her period had begun in class. Because she had no sanitary protection, her uniform was visibly ruined. The cruel, immediate laughter of her classmates had driven her from the room. She was then walking over a mile back home, a public spectacle of a completely natural process, knowing that this moment of shame meant more than just a ruined day: she would now miss an entire week of school.</p>
 
             <p>Then came the heart-stopping detail that truly shattered me: Her mother, a street vendor battling just to put food on the table for three kids, could never afford such a fundamental "luxury" as sanitary pads. When I inquired what she usually uses, she whispered, “Old clothing, which won't even properly soak.” My heart, as a father to a daughter, crumbled. I got emotional.</p>
-
+            
             <p>Immediately, I led her to the nearest shop and bought her two stacks of pads. It was a simple transaction—a few dollars for her supplies. But the way she looked at me, the quiet, profound intensity with which she whispered her thanks—it was as if I hadn't just saved her school days, but had gifted her a whole new life. It was a dignity returned, a future salvaged, and it shook me to my core.</p>
             
             <p>Alem's tears drove me to dig deeper into this social crisis. What I uncovered was a brutal and universal truth: Her story is not an exception; it is a devastating reality for millions of girls in Ethiopia. They are forced into an impossible, heartbreaking choice between their basic human dignity and the right to an education.</p>
             
             <p>We cannot let an incident of biology dictate the future of our daughters. Join Project HOPE. Donate $10 and give a girl her dignity and her education back for three to five years.</p>
           </article>
+          
+          <!-- ITEM 2: NEW CTA 3 (Below Alem's Story) -->
+          <div class="cta-button-row story-cta">
+            <a class="btn btn-primary" href="#donate">❤️ Donate Now</a>
+          </div>
+          
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="video" class="video">
-    <div class="container">
-      <h2>Why We Started: Watch the Project HOPE Story</h2>
-      <div class="video-embed-container">
-        <iframe 
-            width="560" 
-            height="315" 
-            src="https://www.youtube.com/embed/Z8QK89sTWSo?si=sM2HyEBUtDZfoeYR" 
-            title="YouTube video player" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" 
-            allowfullscreen>
-        </iframe>
       </div>
     </div>
   </section>
@@ -129,27 +164,34 @@
     <div class="container">
       <h2>The Devastating Reality of Period Poverty in Ethiopia</h2>
       <div class="stats-grid">
+        <!-- START: ITEM 3 - UPDATED STATS -->
         <div class="stat-card">
-          <p class="stat-number">75% LACK ACCESS</p>
-          <p class="stat-text">Up to **75% of Ethiopian girls and women** do not have access to proper menstrual products, often using unhygienic alternatives.</p>
+          <p class="stat-number">52.69% HAVE SAFE MHM</p>
+          <p class="stat-text">A systematic review found that only about 52.69% of adolescent girls in Ethiopia have safe menstrual hygiene practices.</p>
         </div>
         <div class="stat-card">
-          <p class="stat-number">50% MISS SCHOOL</p>
-          <p class="stat-text">A staggering **50% of schoolgirls** miss between **1 and 4 days of school** every month due to inability to manage their periods.</p>
+          <p class="stat-number">32% MISS SCHOOL DAYS</p>
+          <p class="stat-text">In some studies, around 32% of girls reported missing one or more school days during menstruation.</p>
         </div>
+        <!-- END: ITEM 3 - UPDATED STATS -->
         <div class="stat-card">
+          <!-- Unchanged Stat -->
           <p class="stat-number">67% LACK KNOWLEDGE</p>
           <p class="stat-text">**67% of girls** in Ethiopia report that they **do not receive knowledge or education** about puberty and menstrual health before menarche.</p>
         </div>
+        <!-- START: ITEM 3 - UPDATED STAT -->
         <div class="stat-card">
-          <p class="stat-number">3 MILLION AFFECTED</p>
-          <p class="stat-text">Nearly **3 million Ethiopian schoolgirls** are affected by period poverty, severely limiting their educational opportunities.</p>
+          <p class="stat-number">1.3 MILLION MONTHLY ABSENTEES</p>
+          <p class="stat-text">A UK-documented report noted: “In Ethiopia … approximately 1 in 10 girls miss school due to their period, which equates to ~1.3 million girls each month.”</p>
         </div>
+        <!-- END: ITEM 3 - UPDATED STAT -->
         <div class="stat-card">
+          <!-- Unchanged Stat -->
           <p class="stat-number">WASH FAILURE</p>
           <p class="stat-text">The majority of schools **lack essential water, soap, and private changing rooms** in schools, making proper hygiene management impossible.</p>
         </div>
         <div class="stat-card">
+          <!-- Unchanged Stat -->
           <p class="stat-number">DROPOUT RISK</p>
           <p class="stat-text">Poor MHM is a leading cause of **poor school performance, drop-out, and reduced educational attainment**.</p>
         </div>
@@ -172,7 +214,7 @@
   <section id="transparency" class="transparency">
     <div class="container">
       <h2>Transparency You Can Trust</h2>
-      <p class="lead-text-bold"><strong>All donated crypto is consolidated and converted to USDT (BEP-20) and ** Secured in a multi-signature wallet** — our primary reserve for withdrawals and disbursements. Track every dollar, every kit, live.</strong></p>
+      <p class="lead-text-bold"><strong>All donated crypto is consolidated and converted to USDT (BEP-20) — our primary reserve for withdrawals and disbursements. Track every dollar, every kit, live.</strong></p>
       
       <div class="embed-wrap">
         <iframe class="dune-frame" src="https://dune.com/embeds/5947907/9599307" title="Dune Analytics - Project HOPE"></iframe>
@@ -252,7 +294,7 @@
             <img src="assets/partners/mariam-products.png" alt="Mariam Seba Products Factory">
         </a>
         
-        <a href="project-hope2025.org" target="_blank" class="partner-logo-link">
+        <a href="projectHOPE2025.github.io" target="_blank" class="partner-logo-link">
             <img src="assets/partners/project-hope.png" alt="Project HOPE Initiative">
         </a>
         
@@ -285,9 +327,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
