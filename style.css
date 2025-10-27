@@ -143,7 +143,7 @@ h2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  align-items: center;
+  /* MODIFICATION: Removed 'align-items: center' to allow cards to stretch to equal height */
 }
 .metric-card {
   background-color: var(--color-cream);
@@ -151,7 +151,7 @@ h2 {
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
-  min-height: 180px; /* Ensures all cards are the same height */
+  /* MODIFICATION: Removed fixed min-height to allow natural sizing */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -614,8 +614,9 @@ h2 {
 }
 .partner-logo-link {
     display: block;
-    width: 150px; /* Increased size */
-    height: 150px; /* Increased size */
+    /* MODIFICATION: Increased size by ~15% for better visibility */
+    width: 172px; 
+    height: 172px;
     background-color: var(--color-white); 
     border-radius: 12px;
     overflow: hidden;
@@ -802,4 +803,3 @@ footer p {
     box-shadow: 0 0 10px rgba(217, 112, 47, 0.5);
   }
 }
-
