@@ -45,47 +45,59 @@
     </div>
   </header>
   
-  <!-- ======== NEW: METRIC & URGENCY WIDGET ======== --><section id="metric-widget">
+  <!-- ======== NEW: METRIC & URGENCY WIDGET ======== -->
+  <section id="metric-widget">
     <div class="container">
       <div class="metric-grid">
         
-        <!-- Card 1: Countdown Timer --><div class="metric-card countdown-card">
+        <!-- Card 1: Countdown Timer -->
+        <div class="metric-card countdown-card">
           <h3>Campaign Ends In:</h3>
           <div class="countdown-timer">
-            <!-- IDs are for script.js to target --><div><span id="countdown-days">99</span>Days</div>
+            <!-- IDs are for script.js to target -->
+            <div><span id="countdown-days">99</span>Days</div>
             <div><span id="countdown-hours">10</span>Hours</div>
             <div><span id="countdown-mins">30</span>Mins</div>
             <div><span id="countdown-secs">15</span>Secs</div>
           </div>
         </div>
 
-        <!-- Card 2: Core Goal --><div class="metric-card goal-card">
+        <!-- Card 2: Core Goal -->
+        <div class="metric-card goal-card">
           <p class="goal-text">Our 100-Day Mission:</p>
           <p class="goal-number">100,000</p>
           <p class="goal-label">Schoolgirls Supported</p>
         </div>
 
-        <!-- Card 3: Progress (MODIFIED) --><div class="metric-card progress-card">
+        <!-- Card 3: Progress (MODIFIED) -->
+        <div class="metric-card progress-card">
           <p class="progress-label">Girls Supported So Far:</p>
-          <!-- This number is now set manually in HTML. JS just formats it. --><p class="progress-number" id="girls-supported">1000</p> 
-          <!-- MODIFICATION: Replaced subtext with progress bar --><div class="progress-bar-container">
+          <!-- This number is now set manually in HTML. JS just formats it. -->
+          <p class="progress-number" id="girls-supported">1000</p> 
+          <!-- MODIFICATION: Replaced subtext with progress bar -->
+          <div class="progress-bar-container">
             <div class="progress-bar-inner" id="progress-bar-inner"></div>
           </div>
           <p class="progress-percentage" id="progress-percentage">0%</p>
-          <!-- END MODIFICATION --></div>
+          <!-- END MODIFICATION -->
+        </div>
 
       </div>
     </div>
   </section>
-  <!-- ======== END METRIC WIDGET ======== --><section id="video" class="video">
+  <!-- ======== END METRIC WIDGET ======== -->
+
+  <section id="video" class="video">
     <div class="container">
       <h2>Why We Started: Watch the Project HOPE Story</h2>
       <div class="video-embed-container">
-        <!-- ======== UPDATED YOUTUBE IFRAME ======== --><iframe src="https://www.youtube.com/embed/Z8QK89sTWSo?si=Jt3_NK8YzHc2xTsz" 
+        <!-- ======== UPDATED YOUTUBE IFRAME ======== -->
+        <iframe src="https://www.youtube.com/embed/Z8QK89sTWSo?si=Jt3_NK8YzHc2xTsz" 
                 title="YouTube video player" frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <!-- ======== END UPDATED IFRAME ======== --></div>
+        <!-- ======== END UPDATED IFRAME ======== -->
+      </div>
       <div class="cta-button-row">
         <a class="btn btn-primary" href="#donate">❤️ Donate Now</a>
       </div>
@@ -176,14 +188,17 @@
         </div>
       </div>
 
-      <!-- MODIFICATION: Added Sources List --><div class="sources-list">
+      <!-- MODIFICATION: Added Sources List -->
+      <div class="sources-list">
         <h4>Sources:</h4>
         <ul>
           <li>• Ministry of Education & UNESCO (2023) – Girls’ Education and Attendance Report.</li>
           <li>• Population Council (2024) – Impact of Reusable Pad Interventions in East Africa.</li>
         </ul>
       </div>
-      <!-- END MODIFICATION --></div>
+      <!-- END MODIFICATION -->
+
+    </div>
   </section>
 
   <section id="solution" class="solution">
@@ -203,15 +218,18 @@
       <h2>Transparency You Can Trust</h2>
       <p class="lead-text-bold"><strong>All donated crypto is consolidated and converted to USDT (BEP-20) — our primary reserve for withdrawals and disbursements. Track every dollar, every kit, live.</strong></p>
       
+      <!-- MODIFICATION: Moved Campaign Verified Badge ABOVE Dune embed -->
+      <div class="verified-badge-container">
+        <img src="assets/campaign.png" alt="Campaign Verified Badge" class="campaign-verified-badge" />
+        <p class="verified-text">Verified Blockchain Campaign — Officially Authenticated by Ethiopian Agency for Civil Society Organizations (ACSO).</p>
+      </div>
+      <!-- END MODIFICATION -->
+      
       <div class="embed-wrap">
         <iframe class="dune-frame" src="https://dune.com/embeds/5947907/9599307" title="Dune Analytics - Project HOPE"></iframe>
       </div>
 
-      <!-- NEW: Campaign Verified Badge --><div class="verified-badge-container">
-        <img src="assets/campaign.png" alt="Campaign Verified Badge" class="campaign-verified-badge" />
-        <p class="verified-text">Verified Blockchain Campaign — Officially Authenticated by Ethiopian Agency for Civil Society Organizations (ACSO).</p>
-      </div>
-      <!-- END NEW: Campaign Verified Badge --><img src="assets/transparency.png" alt="Transparency Infographic" class="transparency-image" />
+      <img src="assets/transparency.png" alt="Transparency Infographic" class="transparency-image" />
       
       <div class="cta-button-row">
         <a class="btn btn-primary" href="https://dune.com/browse/dashboards?tags=project+hope" target="_blank">View Live Dune Analytics Dashboard</a>
@@ -248,8 +266,8 @@
       <p class="note">All incoming donations will be converted to USDT (BEP-20) in our verified Binance account for transparency and easy disbursement.</p>
       
       <div class="binance-proof-container">
-          <!-- NEW: Binance Verified Badge --><img src="assets/proof/binance-ver.png" alt="Verified by Binance Proof+" class="binance-verified-badge" />
-          <!-- END NEW: Binance Verified Badge --><img src="assets/proof/binance-verified-plus.png" alt="Binance Verified Plus Account Proof" class="binance-proof-img" />
+          <img src="assets/proof/binance-ver.png" alt="Verified by Binance Proof+" class="binance-verified-badge" />
+          <img src="assets/proof/binance-verified-plus.png" alt="Binance Verified Plus Account Proof" class="binance-proof-img" />
       </div>
     </div>
   </section>
@@ -315,7 +333,8 @@
       <p>© 2025 Project HOPE — Pads for Dignity | Built for Transparency | Powered by Crypto 🌍</p>
     </div>
   </footer>
-  <!-- Floating Donate Now Button --><a href="#donate" class="donate-float-btn">
+  <!-- Floating Donate Now Button -->
+<a href="#donate" class="donate-float-btn">
   ❤️ Donate Now
 </a>
 
