@@ -359,7 +359,8 @@ h2 {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 .campaign-verified-badge {
-    height: 80px; /* Set a fixed height */
+    /* MODIFICATION: Increased badge size */
+    height: 120px; 
     width: auto;
     flex-shrink: 0; /* Don't shrink the badge */
 }
@@ -557,7 +558,8 @@ h2 {
 /* --- NEW: Style for the small Binance Badge (Block 8) --- */
 .binance-verified-badge {
     display: block;
-    height: 50px; /* Small badge size */
+    /* MODIFICATION: Increased badge size */
+    height: 75px; 
     width: auto;
     margin: 0 auto 15px auto; /* Center it above the main image */
 }
