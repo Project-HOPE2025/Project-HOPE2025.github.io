@@ -558,8 +558,8 @@ h2 {
 /* --- NEW: Style for the small Binance Badge (Block 8) --- */
 .binance-verified-badge {
     display: block;
-    /* MODIFICATION: Increased badge size */
-    height: 75px; 
+    /* MODIFICATION: Increased badge size to 120px */
+    height: 120px; 
     width: auto;
     margin: 0 auto 15px auto; /* Center it above the main image */
 }
@@ -847,4 +847,3 @@ footer p {
     box-shadow: 0 0 10px rgba(217, 112, 47, 0.5);
   }
 }
-
