@@ -343,6 +343,38 @@ h2 {
     border: none;
     display: block;
 }
+
+/* --- NEW: Styles for Verified Campaign Badge (Block 7) --- */
+.verified-badge-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.3); /* Light cream/white transparent bg */
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 800px;
+    margin: 30px auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+.campaign-verified-badge {
+    height: 80px; /* Set a fixed height */
+    width: auto;
+    flex-shrink: 0; /* Don't shrink the badge */
+}
+.verified-text {
+    flex: 1; /* Allow text to take remaining space */
+    min-width: 250px; /* Prevent text from getting too squished */
+    text-align: left;
+    font-size: 0.95rem;
+    color: var(--color-coffee);
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0; /* Reset margin */
+}
+/* --- END NEW --- */
+
 .transparency-image {
     max-width: 100%;
     height: auto;
@@ -521,6 +553,16 @@ h2 {
     text-align: center;
     margin-top: 20px;
 }
+
+/* --- NEW: Style for the small Binance Badge (Block 8) --- */
+.binance-verified-badge {
+    display: block;
+    height: 50px; /* Small badge size */
+    width: auto;
+    margin: 0 auto 15px auto; /* Center it above the main image */
+}
+/* --- END NEW --- */
+
 .binance-proof-img {
     /* FIX: Increased max-width to 600px for larger display */
     max-width: 600px; 
@@ -803,3 +845,4 @@ footer p {
     box-shadow: 0 0 10px rgba(217, 112, 47, 0.5);
   }
 }
+
