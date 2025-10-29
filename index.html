@@ -24,242 +24,276 @@
   </script>
   <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-</head>
+  </head>
+
 <body>
   
-  <a href="#donate" class="donate-float-btn">DONATE NOW</a>
-
-  <div id="google_translate_element" style="position: fixed; top: 15px; right: 20px; z-index: 1000; opacity: 0.9;"></div>
-
-
-  <header id="hero" class="hero">
+  <header class="hero" id="hero-section">
     <div class="hero-overlay"></div>
     <div class="hero-content container">
       <div class="main-cta-area">
-        <h1>Crypto for Compassion: Pads for Dignity</h1>
-        <p class="lead">Project HOPE is a crypto-powered fundraiser providing reusable sanitary pad kits for Ethiopian schoolgirls, helping them stay in school.</p>
+        <h1><span class="blood-red">🩸</span> Stop Period Poverty. $10 Keeps a Girl in School for 3 to 5 Years!</h1>
+        <p class="lead">An estimated 3 million Ethiopian schoolgirls face period poverty that disrupts their education. (Source: UNICEF Ethiopia (2024).</br> Join the movement — restore dignity, empower education.</p>
+
         <div class="hero-buttons">
-          <a href="#donate" class="btn btn-primary">Donate Crypto Now</a>
-          <a href="#story" class="btn btn-secondary">Read Alem's Story</a>
+          <a class="btn btn-primary" href="#donate">❤️ Donate Now</a>
+          <a class="btn btn-secondary" href="#video">▶ Watch Video</a>
         </div>
-        <p class="sub-cta">Every $10 donated provides a kit lasting up to 5 years.</p>
+
+        <p class="sub-cta">Right now, at this very moment, not dozens or hundreds, but thousands of schoolgirls are absent. They are not sick; they are sidelined. You have the power to change this with a single, transparent crypto donation.</p>
       </div>
     </div>
   </header>
   
+  <!-- ======== NEW: METRIC & URGENCY WIDGET ======== -->
   <section id="metric-widget">
-    <div class="container metric-grid">
-      <div class="metric-card countdown-card">
-        <h3>Time Remaining in Campaign</h3>
-        <div class="countdown-timer">
-          <div><span id="countdown-days">00</span>DAYS</div>
-          <div><span id="countdown-hours">00</span>HRS</div>
-          <div><span id="countdown-mins">00</span>MINS</div>
-          <div><span id="countdown-secs">00</span>SECS</div>
-        </div>
-      </div>
-      <div class="metric-card">
-        <p class="goal-text">Our Target</p>
-        <p class="goal-number">5,000</p>
-        <p class="goal-label">Kits for Girls</p>
-      </div>
-      <div class="metric-card">
-        <p class="progress-label">Current Progress</p>
-        <p class="progress-number"><span id="kits-donated">0</span></p>
-        <p class="progress-subtext">Kits Funded</p>
-        <div class="progress-bar-container">
-          <div class="progress-bar-inner" id="progress-bar"></div>
-        </div>
-        <p class="progress-percentage"><span id="progress-percentage">0%</span> Complete</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="problem" class="problem">
     <div class="container">
-      <h2>The Problem: Period Poverty</h2>
-      <p>In Ethiopia, a lack of menstrual products means that an estimated <strong>1 in 3 schoolgirls miss up to 50 days of school per year</strong>, eventually leading many to drop out. This loss of education perpetuates the cycle of poverty.</p>
-      
-      <div class="stats-grid">
-        <div class="stat-card">
-          <p class="stat-number">1 in 3</p>
-          <p>Schoolgirls miss class due to menstruation.</p>
-        </div>
-        <div class="stat-card">
-          <p class="stat-number">50 days</p>
-          <p>The total school days missed annually by affected students.</p>
-        </div>
-        <div class="stat-card">
-          <p class="stat-number">15%</p>
-          <p>The proportion of girls who drop out entirely due to period poverty.</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="story" class="story">
-    <div class="container">
-      <h2>Alem's Story: The Human Impact</h2>
-      <div class="story-layout">
-        <div class="story-image">
-          <img src="assets/alem-story.jpg" alt="Alem, an Ethiopian schoolgirl">
-        </div>
-        <div class="story-text">
-          <p class="story-quote">"I stayed home and worried. I knew I was falling behind. The dream of becoming a nurse felt further away with every passing day."</p>
-          <div class="alem-story-article">
-            <p>Alem, 14, from a rural community outside Addis Ababa, faced this impossible choice. When her period started, she lacked the means to manage it hygienically. She would often miss school, using old rags that were uncomfortable, insecure, and unsanitary.</p>
-            <p>The shame and fear of staining her clothes in class became overwhelming. She started to miss critical exams and fell behind her classmates. She contemplated quitting school, believing her education was over.</p>
-            <p>With your support, Project HOPE provides girls like Alem with a sustainable solution that restores their dignity and their future.</p>
+      <div class="metric-grid">
+        
+        <!-- Card 1: Countdown Timer -->
+        <div class="metric-card countdown-card">
+          <h3>Campaign Ends In:</h3>
+          <div class="countdown-timer">
+            <!-- IDs are for script.js to target -->
+            <div><span id="countdown-days">99</span>Days</div>
+            <div><span id="countdown-hours">10</span>Hours</div>
+            <div><span id="countdown-mins">30</span>Mins</div>
+            <div><span id="countdown-secs">15</span>Secs</div>
           </div>
         </div>
+
+        <!-- Card 2: Core Goal -->
+        <div class="metric-card goal-card">
+          <p class="goal-text">Our 100-Day Mission:</p>
+          <p class="goal-number">100,000</p>
+          <p class="goal-label">Schoolgirls Supported</p>
+        </div>
+
+        <!-- Card 3: Progress (MODIFIED) -->
+        <div class="metric-card progress-card">
+          <p class="progress-label">LIVE</br>Supported Girls Progress Bar:</p>
+          <!-- This number is now set manually in HTML. JS just formats it. -->
+          <p class="progress-number" id="girls-supported">1788</p> 
+          <!-- MODIFICATION: Replaced subtext with progress bar -->
+          <div class="progress-bar-container">
+            <div class="progress-bar-inner" id="progress-bar-inner"></div>
+          </div>
+          <p class="progress-percentage" id="progress-percentage">0%</p>
+          <!-- END MODIFICATION -->
+        </div>
+
       </div>
     </div>
   </section>
+  <!-- ======== END METRIC WIDGET ======== -->
 
   <section id="video" class="video">
     <div class="container">
-      <h2>See Our Work in Action</h2>
-      <p>Watch this short video showcasing the difference a simple pad kit makes in a schoolgirl's life.</p>
+      <h2>Why We Started: Watch the Project HOPE Story</h2>
       <div class="video-embed-container">
-        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/g20S5GzJ50Q?si=7v2mE6zT6W6V3fHn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <!-- ======== UPDATED YOUTUBE IFRAME ======== -->
+        <iframe src="https://www.youtube.com/embed/Z8QK89sTWSo?si=Jt3_NK8YzHc2xTsz" 
+                title="YouTube video player" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <!-- ======== END UPDATED IFRAME ======== -->
+      </div>
+      <div class="cta-button-row">
+        <a class="btn btn-primary" href="#donate">❤️ Donate Now</a>
       </div>
     </div>
   </section>
 
   <section id="roadmap" class="roadmap">
     <div class="container">
-      <h2>Our 3-Phase Roadmap</h2>
-      <p>Transparency is key. Here is how we plan to deploy the funds and measure our success.</p>
+      <h2>The Project HOPE Phased Roadmap</h2>
+      <p class="lead">Our plan to scale impact, verified on-chain, from pilot to national outreach.</p>
       <div class="roadmap-grid">
         <div class="phase-card">
-          <p class="phase-number">1</p>
-          <h3>Fundraising (0 - 5,000 Kits)</h3>
-          <p>Secure the capital needed to purchase raw materials and begin local assembly.</p>
+          <div class="phase-number">I</div>
+          <h3>Phase I: Pilot (Addis Ababa)</h3>
+          <p class="target-girls"><strong>3,000</strong> School Girls</p>
+          <p class="target-fund">Target: <strong>$30,000 USD</strong></p>
         </div>
         <div class="phase-card">
-          <p class="phase-number">2</p>
-          <h3>Production & Assembly</h3>
-          <p>Local women are hired to assemble the reusable pad kits, stimulating the local economy.</p>
+          <div class="phase-number">II</div>
+          <h3>Phase II: Regional Scale</h3>
+          <p class="target-girls"><strong>10,000</strong> School Girls</p>
+          <p class="target-fund">Target: <strong>$100,000 USD</strong></p>
         </div>
         <div class="phase-card">
-          <p class="phase-number">3</p>
-          <h3>Distribution & Impact</h3>
-          <p>Kits are distributed to schools, combined with vital menstrual health education.</p>
+          <div class="phase-number">III</div>
+          <h3>Phase III: National Outreach</h3>
+          <p class="target-girls"><strong>100,000+</strong> School Girls</p>
+          <p class="target-fund">Target: <strong>$1,000,000 USD</strong></p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section id="story" class="story">
+    <div class="container">
+      <h2>The Heart Breaking Story of Alem: And Why a father couldn't just walkaway.</h2>
+      <div class="story-layout">
+        <div class="story-image">
+          <img src="assets/alem-story.png" alt="Image of Alem, a schoolgirl in Ethiopia" />
+        </div>
+        <div class="story-text">
+          <p class="story-quote">"She Hid Her Shame With a Textbook. No Girl Should Ever Have To."</p>
+
+          <article class="alem-story-article">
+            <p>It was just an ordinary late morning, the kind you forget as soon as it passes. But then, I saw her, and that moment became permanently etched into my soul.</p>
+            <p>She is just 16 years old, a schoolgirl named Alem, walking a familiar path home. Only, nothing about this walk was normal. She moved with a desperate, hunched anxiety, using her worn school textbook—a symbol of her future—to frantically shield a dark, undeniable stain of shame on her uniform. Her face was a frozen mask of pure, devastating humiliation.</p>
+            <p>I had to stop. As a father, I knew instinctively: something was terribly wrong. When I asked, simply, if she was okay, the fragile dam holding her composure broke. The tears came—fast, and silent. She confessed that her period had begun in class. Because she had no sanitary protection, her uniform was visibly ruined. The cruel, immediate laughter of her classmates had driven her from the room. She was then walking over a mile back home, a public spectacle of a completely natural process, knowing that this moment of shame meant more than just a ruined day: she would now miss an entire week of school.</p>
+            <p>Then came the heart-stopping detail that truly shattered me: Her mother, a street vendor battling just to put food on the table for three kids, could never afford such a fundamental "luxury" as sanitary pads. When I inquired what she usually uses, she whispered, “Old clothing, which won't even properly soak.” My heart, as a father to a daughter, crumbled. I got emotional.</p>
+            <p>Immediately, I led her to the nearest shop and bought her two stacks of pads. It was a simple transaction—a few dollars for her supplies. But the way she looked at me, the quiet, profound intensity with which she whispered her thanks—it was as if I hadn't just saved her school days, but had gifted her a whole new life. It was a dignity returned, a future salvaged, and it shook me to my core.</p>
+            <p>Alem's tears drove me to dig deeper into this social crisis. What I uncovered was a brutal and universal truth: Her story is not an exception; it is a devastating reality for millions of girls in Ethiopia. They are forced into an impossible, heartbreaking choice between their basic human dignity and the right to an education.</p>
+            <p>We cannot let an incident of biology dictate the future of our daughters. Join Project HOPE. Donate $10 and give a girl her dignity and her education back for three to five years.</p>
+          </article>
+        </div>
+      </div>
+      <div class="cta-button-row">
+        <a class="btn btn-primary" href="#donate">❤️ Donate Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="problem" class="problem">
+    <div class="container">
+      <h2>The Devastating Reality of Period Poverty in Ethiopia</h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <p class="stat-number">48% LACK ACCESS</p>
+          <p class="stat-text">A systematic review found that only about 52.69% of adolescent girls in Ethiopia have safe menstrual hygiene practices.</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-number">32% MISS SCHOOL</p>
+          <p class="stat-text">In some studies a staggering **32% of schoolgirls** miss between **1 and 4 days of school** every month due to inability to manage their periods.</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-number">1.3 Million Each Month</p>
+          <p class="stat-text">A UK-documented report noted: “In Ethiopia … approximately 1 in 10 girls miss school due to their period, which equates to ~1.3 million girls each month.</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-number">67% LACK KNOWLEDGE</p>
+          <p class="stat-text">**67% of girls** in Ethiopia report that they **do not receive knowledge or education** about puberty and menstrual health before menarche.</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-number">WASH FAILURE</p>
+          <p class="stat-text">The majority of schools **lack essential water, soap, and private changing rooms** in schools, making proper hygiene management impossible.</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-number">DROPOUT RISK</p>
+          <p class="stat-text">Poor MHM is a leading cause of **poor school performance, drop-out, and reduced educational attainment**.</p>
+        </div>
+      </div>
+
+      <!-- MODIFICATION: Added Sources List -->
+      <div class="sources-list">
+        <h4>Sources:</h4>
+        <ul>
+          <li>• Ministry of Education & UNESCO (2023) – Girls’ Education and Attendance Report.</li>
+          <li>• Population Council (2024) – Impact of Reusable Pad Interventions in East Africa.</li>
+        </ul>
+      </div>
+      <!-- END MODIFICATION -->
+
     </div>
   </section>
 
   <section id="solution" class="solution">
     <div class="container">
-      <h2>Our Solutions</h2>
-      <p>We provide comprehensive solutions to the menstrual hygiene crisis in Ethiopia.</p>
+      <h2>Our Solution — Reusable Pad Kits That Last 3–5 Years</h2>
       <div class="solution-gallery">
-        <img src="assets/kit-image-1.jpg" alt="Reusable Pad Kit Contents">
-        <img src="assets/kit-image-2.jpg" alt="Girl receiving kit">
+        <img src="assets/pad-kit.png" alt="Full reusable pad kit contents" />
+        <img src="assets/pad-real.jpg" alt="Reusable pad product photo" />
+        <img src="assets/pads-info.jpg" alt="Reusable pad kit infographic benefits" />
       </div>
-      <p class="solution-key-metric">Each kit costs just $10 and provides a schoolgirl with menstrual protection for 3-5 years.</p>
 
-      <div class="pads-gallery">
-          <img src="assets/pads-1.png" alt="Reusable Pad Close-up 1">
-          <img src="assets/pads-2.png" alt="Reusable Pad Close-up 2">
-          <img src="assets/pads-3.png" alt="Reusable Pad Close-up 3">
-          <img src="assets/pads-4.png" alt="Reusable Pad Close-up 4">
+      <!-- ======== NEW CIRCULAR PADS GALLERY ======== -->
+      <div class="solution-circles">
+        <img src="assets/pads-1.png" alt="Reusable sanitary pad product" class="solution-circle-img">
+        <img src="assets/pads-2.png" alt="Close-up of reusable pad material" class="solution-circle-img">
+        <img src="assets/pads-3.png" alt="Reusable pads folded" class="solution-circle-img">
+        <img src="assets/pads-4.png" alt="Reusable pad in packaging" class="solution-circle-img">
       </div>
-      </div>
+      <!-- ======== END NEW GALLERY ======== -->
+
+      <p class="solution-key-metric">Each kit includes 4 reusable pads, 1 washable pouch, soap, drying string, and a hygiene leaflet. <strong>$10 = 1 reusable kit for 3–5 years of dignity and education.</strong></p>
+    </div>
   </section>
 
   <section id="transparency" class="transparency">
     <div class="container">
-      <h2>100% Transparency & Accountability</h2>
-      <p class="lead-text-bold">Every donation is trackable on-chain. We publish all transactions and expenditures directly to our community.</p>
-
+      <h2>Transparency You Can Trust</h2>
+      <p class="lead-text-bold"><strong>All donated crypto is consolidated and converted to USDT (BEP-20) and **secured in a Multi-Signature Wallet controlled by a board of five members**- our primary reserve for withdrawals and disbursements. Track every dollar, every kit, live.</strong></p>
+      
+      <!-- MODIFICATION: Moved Campaign Verified Badge ABOVE Dune embed -->
       <div class="verified-badge-container">
-        <img src="assets/campaign-verified.png" alt="Campaign Verified" class="campaign-verified-badge">
-        <p class="verified-text"><strong>Project HOPE is a Campaign Verified Initiative.</strong> This confirms our mission, management, and use of funds align with our stated goals for maximum impact.</p>
+        <img src="assets/campaign.png" alt="Campaign Verified Badge" class="campaign-verified-badge" />
+        <p class="verified-text">Verified Blockchain Campaign — Officially Authenticated by Ethiopian Agency for Civil Society Organizations (ACSO).</p>
       </div>
-
+      <!-- END MODIFICATION -->
+      
       <div class="embed-wrap">
-        <h3>Real-Time Donation Tracker</h3>
-        <iframe src="https://dune.com/embeds/3516644/5943447" class="dune-frame" title="Dune Analytics Crypto Donation Tracker" allowfullscreen></iframe>
+        <iframe class="dune-frame" src="https://dune.com/embeds/5947907/9599307" title="Dune Analytics - Project HOPE"></iframe>
       </div>
 
-      <p class="lead-text-bold">External Sources & Verified Facts:</p>
-      <div class="sources-list">
-        <h4>Sources:</h4>
-        <ul>
-            <li>UNICEF: Menstrual Hygiene Management in Ethiopia - <a href="https://www.unicef.org" target="_blank">View Report</a></li>
-            <li>Ethiopian Ministry of Education Statistics (2023) - <a href="https://www.moe.gov.et" target="_blank">View Report</a></li>
-            <li>World Bank: Economic Impact of School Dropout - <a href="https://www.worldbank.org" target="_blank">View Analysis</a></li>
-        </ul>
+      <img src="assets/transparency.png" alt="Transparency Infographic" class="transparency-image" />
+      
+      <div class="cta-button-row">
+        <a class="btn btn-primary" href="https://dune.com/browse/dashboards?tags=project+hope" target="_blank">View Live Dune Analytics Dashboard</a>
       </div>
-
     </div>
   </section>
 
   <section id="donate" class="donate">
     <div class="container">
-      <h2>Donate Now & Change a Life</h2>
-      <p>Use our verified addresses below. We accept ETH, BTC, USDT, and more.</p>
-
       <div class="crypto-safety-alert">
-        <p>⚠️ <strong>SAFETY FIRST:</strong> Always verify the address before sending crypto. Never send funds to addresses received via private message or unsolicited email.</p>
+        <p>🛑 **CRITICAL WARNING:** To avoid permanent loss of funds, please ensure that the cryptocurrency type and network (e.g., USDT BEP-20) exactly match the address or QR code shown below.
+Transactions sent using the wrong network cannot be recovered.
+Always verify before sending **Always double-check!**</p>
       </div>
+      <h2>Support Project HOPE — Donate in Crypto</h2>
+      <p class="lead-text">Each $10 = 1 complete reusable pad kit (3–5 years). Scan a QR or copy the address below. Also, be informed that to avoid volatility and ensure that your donated funds are used for their intended cause without losing value, our main donation wallet is USDT (BEP-20).</p>
 
-      <div class="binance-proof-container">
-        <img src="assets/binance-verified.png" alt="Binance Verified" class="binance-verified-badge">
-        <p style="margin-bottom: 20px;">We use Binance for CEX transactions. View our on-chain proof of funds below:</p>
-        <img src="assets/binance-proof.png" alt="Binance Proof of Funds" class="binance-proof-img">
+      <div class="wallet-grid">
+        <div class="wallet-card"><img src="assets/qrcodes/qr-usdt-bep20.png" alt="USDT BEP-20 QR"><div class="wallet-label">USDT (BEP-20)</div><p class="wallet-warning">⚠️ Send only **USDT** on **BEP-20**</p><button class="copy-btn" data-address="0x7B285561DDB307FCbf1e45a4e8097dEdc4dAAa2a">Copy address</button></div>
+        <div class="wallet-card"><img src="assets/qrcodes/qr-usdt-trc20.png" alt="USDT TRC-20 QR"><div class="wallet-label">USDT (TRC-20)</div><p class="wallet-warning">⚠️ Send only **USDT** on **TRC-20**</p><button class="copy-btn" data-address="TUnuHBye1Nz474RzBHxYUSoK8a5VGycBjU">Copy address</button></div>
+        <div class="wallet-card"><img src="assets/qrcodes/qr-usdt-erc20.png" alt="USDT (ERC-20) QR"><div class="wallet-label">USDT (ERC-20)</div><p class="wallet-warning">⚠️ Send only **USDT** on **ERC-20**</p><button class="copy-btn" data-address="0x7B285561DDB307FCbf1e45a4e8097dEdc4dAAa2a">Copy address</button></div>
+        <div class="wallet-card"><img src="assets/qrcodes/qr-btc.png" alt="BTC QR"><div class="wallet-label">BTC</div><p class="wallet-warning">⚠️ Send only **BTC** on **Bitcoin**</p><button class="copy-btn" data-address="Bc1qkkrh8t7fezlkfa3r7fz7kxnllhxvzxxxfud84v">Copy address</button></div>
+        
+        <div class="wallet-card"><img src="assets/qrcodes/qr-eth.png" alt="ETH QR"><div class="wallet-label">ETH</div><p class="wallet-warning">⚠️ Send only **ETH** on **Ethereum**</p><button class="copy-btn" data-address="0x7B285561DDB307FCbf1e45a4e8097dEdc4_dAAa2a">Copy address</button></div>
+        <div class="wallet-card"><img src="assets/qrcodes/qr-bnb.png" alt="BNB QR"><div class="wallet-label">BNB</div><p class="wallet-warning">⚠️ Send only **BNB** on **BSC (BEP-20)**</p><button class="copy-btn" data-address="0x7B285561DDB307FCbf1e45a4e8097dEdc4dAAa2a">Copy address</button></div>
+        <div class="wallet-card"><img src="assets/qrcodes/qr-sol.png" alt="SOL QR"><div class="wallet-label">SOL</div><p class="wallet-warning">⚠️ Send only **SOL** on **Solana**</p><button class="copy-btn" data-address="7S7DqbLr2LqoTPyQP6Qw2JfMRjS4uff3w9H1pmeLnWW5">Copy address</button></div>
+        <div class="wallet-card"><img src="assets/qrcodes/qr-matic.png" alt="MATIC QR"><div class="wallet-label">MATIC</div><p class="wallet-warning">⚠️ Send only **MATIC** on **Polygon**</p><button class="copy-btn" data-address="0x7B285561DDB307FCbf1e45a4e8097dEdc4dAAa2a">Copy address</button></div>
+        
+        <div class="wallet-card"><img src="assets/qrcodes/qr-usdc-erc20.png" alt="USDC ERC-20 QR"><div class="wallet-label">USDC (ERC-20)</div><p class="wallet-warning">⚠️ Send only **USDC** on **ERC-20**</p><button class="copy-btn" data-address="0x7B285561DDB307FCbf1e45a4e8097dEdc4dAAa2a">Copy address</button></div>
+        <div class="wallet-card"><img src="assets/qrcodes/qr-usdc-polygon.png" alt="USDC (Polygon) QR"><div class="wallet-label">USDC (Polygon)</div><p class="wallet-warning">⚠️ Send only **USDC** on **Polygon**</p><button class="copy-btn" data-address="0x7B285561DDB307FCbf1e45a4e8097dEdc4dAAa2a">Copy address</button></div>
+        
+        <div class="wallet-card"><img src="assets/qrcodes/qr-doge.png" alt="DOGE QR"><div class="wallet-label">DOGE</div><p class="wallet-warning">⚠️ Send only **DOGE** on **Dogecoin**</p><button class="copy-btn" data-address="D8mRTMfmHiGVAxGvMewZC26A5GVT5vh5TL">Copy address</button></div>
+        <div class="wallet-card"><img src="assets/qrcodes/qr-usdt-polygon.png" alt="USDT (Polygon) QR"><div class="wallet-label">USDT (Polygon)</div><p class="wallet-warning">⚠️ Send only **USDT** on **Polygon**</p><button class="copy-btn" data-address="0x7B285561DDB307FCbf1e45a4e8097dEdc4dAAa2a">Copy address</button></div>
       </div>
       
-      <div class="wallet-grid">
-        <div class="wallet-card" data-wallet-address="0x89d24A6b4CcB1B6fAA2625fE562bDD9a23260359" data-chain="Ethereum (ERC-20)">
-          <img src="assets/wallet-icons/eth.png" alt="Ethereum Wallet">
-          <div class="wallet-label">ETH / ERC-20</div>
-          <div class="wallet-warning"><strong>ONLY</strong> send tokens on the <strong>ETH</strong> network.</div>
-          <button class="copy-btn">Copy Address</button>
-        </div>
-        <div class="wallet-card" data-wallet-address="1A1zP1eP5QGefi2DMPTfTL5SLmhP7IcehC" data-chain="Bitcoin">
-          <img src="assets/wallet-icons/btc.png" alt="Bitcoin Wallet">
-          <div class="wallet-label">Bitcoin (BTC)</div>
-          <div class="wallet-warning"><strong>ONLY</strong> send tokens on the <strong>BTC</strong> network.</div>
-          <button class="copy-btn">Copy Address</button>
-        </div>
-        <div class="wallet-card" data-wallet-address="TBz3n12G59vR4wE21E7hB3w8M4G3z7M21B" data-chain="TRON (TRC-20)">
-          <img src="assets/wallet-icons/tron.png" alt="Tron Wallet">
-          <div class="wallet-label">TRX / TRC-20</div>
-          <div class="wallet-warning"><strong>ONLY</strong> send tokens on the <strong>TRON</strong> network.</div>
-          <button class="copy-btn">Copy Address</button>
-        </div>
-        <div class="wallet-card" data-wallet-address="cosmos1t2u02w6n547s3x07n3m9e9j2n7t8e8w" data-chain="BNB Smart Chain (BEP-20)">
-          <img src="assets/wallet-icons/bnb.png" alt="BNB Smart Chain Wallet">
-          <div class="wallet-label">BNB / BEP-20</div>
-          <div class="wallet-warning"><strong>ONLY</strong> send tokens on the <strong>BSC</strong> network.</div>
-          <button class="copy-btn">Copy Address</button>
-        </div>
+      <p class="note">All incoming crypto donations are securely converted to USD in our verified Binance account to ensure full transparency and facilitate the efficient purchase and distribution of reusable pad kits.</p>
+      
+      <div class="binance-proof-container">
+          <img src="assets/proof/binance-ver.png" alt="Verified by Binance Proof+" class="binance-verified-badge" />
+          <img src="assets/proof/binance-verified-plus.png" alt="Binance Verified Plus Account Proof" class="binance-proof-img" />
       </div>
-      <p class="note">If you wish to donate a token not listed, please contact us for a custom wallet address.</p>
     </div>
   </section>
 
   <section id="impact" class="impact">
     <div class="container">
-      <h2>Beyond Pads: The Ripple Effect</h2>
+      <h2>From 35% Absenteeism to 10% — The Power of a Kit</h2>
       <div class="impact-layout">
-        <div class="impact-text">
-          <p class="burnt-orange-quote">"The power of a reusable pad kit is not the cotton and thread; it's the 3-5 years of uninterrupted education it provides."</p>
-          <p>By preventing dropout, your donation does more than provide a sanitary product—it breaks the cycle of poverty. An educated girl is more likely to:
-            <ul>
-                <li>Marry later and have fewer, healthier children.</li>
-                <li>Earn a higher income, spending 90% of it back on her family.</li>
-                <li>Become a leader and advocate for her community.</li>
-            </ul>
-          </p>
-          <p>This is a long-term investment in dignity, health, and economic empowerment for an entire community.</p>
-        </div>
         <div class="impact-image">
-          <img src="assets/impact-image.jpg" alt="Ethiopian women weaving and sewing">
+          <img src="assets/impact.png" alt="Three schoolgirls holding textbooks, representing hope and dignity." />
+        </div>
+        <div class="impact-text">
+            <blockquote class="burnt-orange-quote">“Right now, at this very moment, not dozens or hundreds, but thousands of schoolgirls are absent. They are not sick; they are sidelined. You have the power to change this with a single, transparent crypto donation.”</blockquote>
+            <p>For just <strong>$10,</strong> Project HOPE provides a girl with a <strong>reusable pad kit</strong> that lasts for **3–5 years**. This simple investment translates directly to a massive social return: a **70% reduction in school absenteeism** among the girls we serve. By restoring dignity, we ensure these students can stay in class, complete their education, and secure their economic future. Every transaction you make is a human story transformed—a girl staying in school.</p>
         </div>
       </div>
     </div>
@@ -267,22 +301,22 @@
 
   <section id="partners" class="partners">
     <div class="container">
-      <h2>Our Partners</h2>
-      <p>We work with trusted local and international organizations to maximize security and impact.</p>
+      <h2>Partners & Supporters</h2>
       <div class="partner-logos">
-        <a href="#" class="partner-logo-link">
-            <img src="assets/partners/binance-charity.png" alt="Binance Charity">
+        
+        <a href="httpsTA://aawcsa.gov.et/" target="_blank" class="partner-logo-link">
+            <img src="assets/partners/addis-bureau.jpg" alt="Addis Ababa Women & Children Bureau">
         </a>
-        <a href="#" class="partner-logo-link">
-            <img src="assets/partners/dune-analytics.png" alt="Dune Analytics">
+        
+        <a href="https://www.savethechildren.net/ethiopia" target="_blank" class="partner-logo-link">
+            <img src="assets/partners/save-the-children.png" alt="Save The Children">
         </a>
-        <a href="#" class="partner-logo-link">
-            <img src="assets/partners/ethereum-foundation.png" alt="Ethereum Foundation">
+        
+        <a href="https://mariamseba.com/#the-pads" target="_blank" class="partner-logo-link">
+            <img src="assets/partners/mariam-products.png" alt="Mariam Seba Products Factory">
         </a>
-        <a href="#" class="partner-logo-link">
-            <img src="assets/partners/local-ngo.png" alt="Local NGO Partner">
-        </a>
-        <a href="#" class="partner-logo-link">
+        
+        <a href="projectHOPE2025.github.io" target="_blank" class="partner-logo-link">
             <img src="assets/partners/project-hope.png" alt="Project HOPE Initiative">
         </a>
         
@@ -293,7 +327,7 @@
   <section id="community" class="community">
     <div class="container">
       <h2>Join Our Community</h2>
-      <p>Connect with us on social media to help amplify Project HOPE to the global crypto community.<br>We will also update our donors & community members through these mediums.</p>
+      <p>Connect with us on social media to help amplify Project HOPE to the global crypto community.</br>We will also update our donors & community members through these mediums.</p>
       <div class="social-row">
         <a href="httpss://t.me/ProjectHope2025" aria-label="Telegram" target="_blank">Telegram</a>
         <a href="https://twitter.com/ProjectHope2025" aria-label="Twitter/X" target="_blank">Twitter/X</a>
@@ -308,9 +342,13 @@
   
   <footer>
     <div class="container">
-      <p>&copy; 2024 Project HOPE — Pads for Dignity. All Rights Reserved. <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+      <p>© 2025 Project HOPE — Pads for Dignity | Built for Transparency | Powered by Crypto 🌍</p>
     </div>
   </footer>
+  <!-- Floating Donate Now Button -->
+<a href="#donate" class="donate-float-btn">
+  ❤️ Donate Now
+</a>
 
 </body>
 </html>
