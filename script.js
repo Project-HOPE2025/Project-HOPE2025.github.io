@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
    */
   function setupCountdown() {
     // SET YOUR CAMPAIGN END DATE HERE
-    const campaignEndDate = new Date("February 10, 2026 01:00:00").getTime();
+    const campaignEndDate = new Date("February 12, 2026 01:00:00").getTime();
 
     // Get elements
     const daysEl = document.getElementById("countdown-days");
@@ -158,5 +158,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 3000); // Show for 3 seconds
   }
 });
+
 
 
